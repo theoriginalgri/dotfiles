@@ -12,7 +12,11 @@ source $ZSH/oh-my-zsh.sh
 # User configuration
 
 source $HOME/.dotfiles/aliases
-source $HOME/.dotfiles/extra
+
+if [ -f $HOME/.dotfiles/extra ]; then
+	source $HOME/.dotfiles/extra
+fi
+
 export EDITOR='vim'
 setopt No_HIST_VERIFY
 
