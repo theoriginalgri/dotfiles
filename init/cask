@@ -31,7 +31,9 @@ installcask gnucash
 # Development
 installcask pycharm
 installcask appcode
+installcask android-studio-bundle
 installcask sourcetree
+installcask textmate
 #installcask github
 
 # Utilities
@@ -40,6 +42,7 @@ installcask macdown
 installcask vlc
 installcask plex-home-theater
 installcask renamer
+installcask telephone
 
 # Games
 installcask steam
