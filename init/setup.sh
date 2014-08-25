@@ -1,5 +1,16 @@
 #!/usr/bin/env bash
 
+function addShell() {
+	RESULT=`egrep $1 /etc/shells`
+	
+	if [ $RESULT ]; then
+		echo "Skipping $1. Already in /etc/shells."
+		return
+	fi
+	
+	sudo echo "$1" >> /etc/shells
+}
+
 # set osx defaults
 echo "[i] Set OS X defaults"
 ./osx
@@ -15,8 +26,11 @@ ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"
 # install brew formula
 echo "[i] Install Brew formula"
 brew bundle Brewfile
-sudo echo "/usr/local/bin/bash" >> /etc/shells
-sudo echo "/usr/local/bin/zsh" >> /etc/shells
+
+# add shells
+echo "[i] Add brew zsh and bash to shells"
+addShell /usr/local/bin/bash
+addShell /usr/local/bin/zsh
 
 # install brew cask apps
 echo "[i] Install brew cask apps"
