@@ -20,15 +20,18 @@ fi
 export EDITOR='nano'
 setopt No_HIST_VERIFY
 
-# for homebrew
-export PATH=/usr/local/bin:/usr/local/sbin:$PATH
-export PATH=$(brew --prefix coreutils)/libexec/gnubin:$PATH
+# OSX Specific stuff
+if [[ "$OSTYPE" == "darwin"* ]]; then
+	# for homebrew
+	export PATH=/usr/local/bin:/usr/local/sbin:$PATH
+	export PATH=$(brew --prefix coreutils)/libexec/gnubin:$PATH
 
-# Install brew casks in /Applications
-export HOMEBREW_CASK_OPTS="--appdir=/Applications"
+	# Install brew casks in /Applications
+	export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 
-# for virtualenvwrapper
-export WORKON_HOME=$HOME/.virtualenvs
-#source /Library/Frameworks/Python.framework/Versions/3.3/bin/virtualenvwrapper.sh
+	# for virtualenvwrapper
+	export WORKON_HOME=$HOME/.virtualenvs
+	#source /Library/Frameworks/Python.framework/Versions/3.3/bin/virtualenvwrapper.sh
+fi
 
 echo "happy hacking :)"
