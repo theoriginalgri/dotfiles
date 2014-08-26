@@ -17,7 +17,7 @@ if [ -f $HOME/.dotfiles/extra ]; then
 	source $HOME/.dotfiles/extra
 fi
 
-export EDITOR='vim'
+export EDITOR='nano'
 setopt No_HIST_VERIFY
 
 # for homebrew
