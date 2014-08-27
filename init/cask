@@ -23,6 +23,7 @@ installcask adium
 # Cloud Storage
 installcask dropbox
 installcask google-drive
+installcask bittorrent-sync
 
 # Office
 installcask libreoffice
@@ -36,15 +37,14 @@ installcask sourcetree
 installcask textmate
 #installcask github
 
-# Utilities
-installcask wireshark
-installcask macdown
-installcask vlc
-installcask plex-home-theater
-installcask renamer
-installcask telephone
-
 # Games
 installcask steam
 installcask openttd
 installcask teamspeak-client
+
+# Utilities
+installcask macdown
+installcask vlc
+installcask plex-home-theater
+installcask telephone
+installcask wireshark
