@@ -12,8 +12,14 @@ function addShell() {
 }
 
 # install Command Line Tools
-echo "[i] Install Command Line Tools"
+echo "[i] Install XCode"
 xcode-select --install
+
+echo "[i] Install Java"
+java > /dev/null
+
+echo "[i] Install Cocoapods"
+sudo gem install cocoapods
 
 # install homwbrew
 echo "[i] Install Homebrew"
