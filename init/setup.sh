@@ -8,12 +8,8 @@ function addShell() {
 		return
 	fi
 	
-	sudo echo "$1" >> /etc/shells
+	sudo sh -c "echo \"$1\" >> /etc/shells"
 }
-
-# set osx defaults
-echo "[i] Set OS X defaults"
-./osx
 
 # install Command Line Tools
 echo "[i] Install Command Line Tools"
@@ -60,4 +56,6 @@ echo "[i] Install Python Packages"
 echo "[i] Doing some stuff"
 mkdir ~/.virtualenvs 
 
-echo "[+] Done :)"
+# set osx defaults
+echo "[i] Set OS X defaults"
+./osx
