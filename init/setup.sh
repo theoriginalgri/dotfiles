@@ -23,7 +23,13 @@ sudo gem install cocoapods
 
 # install homwbrew
 echo "[i] Install Homebrew"
-ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"
+brew info > /dev/null
+
+if [ $? -eq 0 ]; then
+	echo "Skipped. Homebrew is already installed"
+else
+	ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"
+fi
 
 # install brew formula
 echo "[i] Install Brew formula"
