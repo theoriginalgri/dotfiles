@@ -35,6 +35,10 @@ fi
 echo "[i] Install Brew formula"
 brew bundle Brewfile
 
+# install certificates
+echo "[i] Install CAcert certificates"
+./setup-cacert.sh
+
 # add shells
 echo "[i] Add brew zsh and bash to shells"
 addShell /usr/local/bin/bash
