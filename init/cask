@@ -35,6 +35,7 @@ installcask appcode
 installcask android-studio-bundle
 installcask sourcetree
 installcask textmate
+sqlite-database-browser
 #installcask github
 
 # Games
